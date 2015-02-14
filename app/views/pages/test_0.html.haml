@@ -1,4 +1,4 @@
-.col-md-12
+.col-md-12#test
   %h1 Test #0 - the basics
   %p
     Welcome to How do I QA?
@@ -13,5 +13,11 @@
       %li Click the 'Next' button.
       %li Check that the next page contains some text that's unique to it.
     And you are finished with the basics of basics.
+  %p
+    Things we learn in this step:
+    %ul
+      %li= link_to 'capybara\'s visit method', 'https://github.com/jnicklas/capybara#navigating'
+      %li= link_to 'clicking links and buttons', 'https://github.com/jnicklas/capybara#clicking-links-and-buttons'
+      %li= link_to 'checking for content', 'https://github.com/jnicklas/capybara#querying'
 
 = render 'common/footer', next_link: test_1_pages_path

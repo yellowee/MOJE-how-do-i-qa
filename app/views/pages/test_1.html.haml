@@ -1,8 +1,15 @@
-.col-md-12
-  %h1 Test #1
+.col-md-12#test
+  %h1 Test #1 - scoping
+  %p
+    You will probably notice this page now has two Next buttons - the spec needs to know which one is the one you want to click.
   %h3 Your task
   %p
+    Write a test that clicks the correct button.
+  %p
+    Things we learn in this step:
+    %ul
+      %li= link_to 'capybara\'s within method', 'https://github.com/jnicklas/capybara#scoping'
+  %p
+    = link_to 'Next', '#', class: 'btn btn-success'
 
-
-
-= render 'common/footer', next_link: test_1_pages_path
+= render 'common/footer', next_link: test_2_pages_path
