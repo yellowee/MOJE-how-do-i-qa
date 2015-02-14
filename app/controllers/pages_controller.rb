@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   skip_before_filter :verify_authenticity_token, only: [:test_4]
+  before_filter :authenticate_user!, only: [:test_5]
 
   def test_0
   end
@@ -25,6 +26,9 @@ class PagesController < ApplicationController
     if params[:trigger].present?
       render json: { response_text: 'This is answer from the server' }
     end
+  end
+
+  def test_5
   end
 
 end
