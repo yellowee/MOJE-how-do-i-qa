@@ -13,4 +13,8 @@ We're using postgres.
 Then in the pql console run: `\i /path/to/db/development_setup_script.sql`
 Exit console by typing `\q`
 
-Then `rake db:migrate`
+Then `rake db:reseed` to populate development environment with example data.
+
+# Run
+
+`rails s`

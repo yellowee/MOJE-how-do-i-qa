@@ -6,5 +6,6 @@ CREATE USER howdoiqa WITH PASSWORD 'howdoiqa';
 GRANT ALL PRIVILEGES ON DATABASE howdoiqa_development TO howdoiqa;
 GRANT ALL PRIVILEGES ON DATABASE howdoiqa_test TO howdoiqa;
 
-ALTER DATABASE webinarium_test OWNER TO howdoiqa;
+ALTER DATABASE howdoiqa_development OWNER TO howdoiqa;
+ALTER DATABASE howdoiqa_test OWNER TO howdoiqa;
 ALTER ROLE howdoiqa CREATEDB;

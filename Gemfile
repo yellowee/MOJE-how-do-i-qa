@@ -18,6 +18,7 @@ gem 'haml-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'devise'
+gem 'sprig', '~> 0.1'
 
 group :development, :test do
   gem 'bogus', require: false
