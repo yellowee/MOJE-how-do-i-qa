@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  skip_before_filter :verify_authenticity_token, only: [:test_4]
 
   def test_0
   end
@@ -14,6 +15,15 @@ class PagesController < ApplicationController
       else
         flash.now[:alert] = 'Some data was missing'
       end
+    end
+  end
+
+  def test_3
+  end
+
+  def test_4
+    if params[:trigger].present?
+      render json: { response_text: 'This is answer from the server' }
     end
   end
 
