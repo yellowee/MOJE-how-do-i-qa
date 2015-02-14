@@ -13,6 +13,8 @@ We're using postgres.
 Then in the pql console run: `\i /path/to/db/development_setup_script.sql`
 Exit console by typing `\q`
 
+**Copy database.yml.sample to database.yml and fill in the password you chose earlier.**
+
 Then `rake db:reseed` to populate development environment with example data.
 
 # Gem dependencies
