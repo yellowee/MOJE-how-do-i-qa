@@ -15,6 +15,10 @@ Exit console by typing `\q`
 
 Then `rake db:reseed` to populate development environment with example data.
 
+# Gem dependencies
+
+[Webkit as js driver for cabypara](https://github.com/thoughtbot/capybara-webkit/wiki/Installing-Qt-and-compiling-capybara-webkit)
+
 # Run
 
 `rails s`

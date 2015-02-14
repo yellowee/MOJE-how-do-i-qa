@@ -27,6 +27,8 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'ffaker'
   gem 'poltergeist', require: false
+  gem 'selenium-webdriver'
+  gem 'capybara-webkit'
   gem 'pry'
   gem 'pry-rails'
   gem 'quiet_assets'
