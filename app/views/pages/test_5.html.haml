@@ -7,11 +7,12 @@
     Write a spec for page that requires authentication.
     Don't log the user in, stub the required methods instead and return an object you create in spec.
     Check if your user's email displays on the page.
+  %h3 Things we learn in this step:
   %p
-    %h3 Things we learn in this step:
     %ul
       %li= link_to 'stubs on any instance of a class', 'http://www.rubydoc.info/github/rspec/rspec-mocks/RSpec/Mocks/ExampleMethods%3aallow_any_instance_of'
       %li= link_to 'creating a resource object using a factory', 'http://www.rubydoc.info/gems/factory_girl/file/GETTING_STARTED.md#Defining_factories'
+  %h2 Subject of test:
   %p
     This is current user's email:
     %strong= current_user.email
