@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :pages, only: [] do
     collection do
       get :test_0, :test_1, :test_2, :test_3, :test_4
-      get :test_5
+      get :test_5, :test_6
       post :test_2, :test_4
     end
   end
