@@ -9,6 +9,7 @@ feature 'Test #5' do
 
   scenario 'user can see his email displayed on page', js: true do
     visit test_5_pages_path
+    expect(page).to have_content 'Test #5'
     expect(page).to have_content 'test@testowski.pl'
   end
 
