@@ -1,3 +1,3 @@
 include Sprig::Helpers
 
-sprig [User]
+sprig [User, SomeModule::Country]

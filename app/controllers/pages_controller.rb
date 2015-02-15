@@ -31,4 +31,8 @@ class PagesController < ApplicationController
   def test_5
   end
 
+  def test_6
+    @countries = SomeModule::Country.all
+  end
+
 end

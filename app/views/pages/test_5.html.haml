@@ -4,14 +4,16 @@
     Most of the time the pages are behind a filter that checks if you're logged in first.
   %h3 Your task
   %p
-    Write a spec for page that checks authentication. Don't log the user in, stub the required methods instead.
+    Write a spec for page that requires authentication.
+    Don't log the user in, stub the required methods instead and return an object you create in spec.
+    Check if your user's email displays on the page.
   %p
     %h3 Things we learn in this step:
     %ul
-      %li= link_to 'stubs on any instance of a class', 'https://relishapp.com/rspec/rspec-mocks/v/2-6/docs/method-stubs/stub-on-any-instance-of-a-class'
+      %li= link_to 'stubs on any instance of a class', 'http://www.rubydoc.info/github/rspec/rspec-mocks/RSpec/Mocks/ExampleMethods%3aallow_any_instance_of'
       %li= link_to 'creating a resource object using a factory', 'http://www.rubydoc.info/gems/factory_girl/file/GETTING_STARTED.md#Defining_factories'
   %p
     This is current user's email:
     %strong= current_user.email
 
-= render 'common/footer', next_link: test_5_pages_path
+= render 'common/footer', next_link: test_6_pages_path
