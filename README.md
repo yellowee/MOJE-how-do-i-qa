@@ -15,7 +15,9 @@ Exit console by typing `\q`
 
 **Copy database.yml.sample to database.yml and fill in the password you chose earlier.**
 
-Then `rake db:reseed` to populate development environment with example data.
+Then `rake db:reseed` to populate development environment with example data.  
+
+Type `rake db:test:load` to load your test database schema.
 
 # Gem dependencies
 
