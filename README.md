@@ -2,19 +2,27 @@
 Introduction to acceptance testing
 
 FORK THE PROJECT!
+>(Forking is creating your own instance of the project, where you can make all the changes you want, and commit your specs without spoiling the fun to anyone else. To fork the project, look for `Fork` button at the top right corner of this page.)
 
 # Dependencies
 **Download and set these up first.**
 
-1. Ruby 2.1.5
+1. MacOS up to date (older versions may not allow you to install Xcode)
+
+2. Xcode (download from AppStore, run and accept the T&C):
+
+- In OSX 10.9+ you may need to install xCode command tools to allow you to install libiconv.
+`xcode-select --install`
+
+3. Ruby 2.1.5
 - Install RVM (if you don't have it)
 `\curl -sSL https://get.rvm.io | bash`
 
 - Install Ruby 2.1.5
 `rvm install "ruby-2.1.5"`
 
-2. Postgres
-- Install Homebrew (if you don't have it)
+4. Postgres (database)
+- Install Homebrew (package manager)
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 - Install Postgres using Homebrew
@@ -28,10 +36,8 @@ If you see the message that postgresql has started (https://monosnap.com/file/cS
 
 And check again.
 
-3. Libraries for nokogiri gem
+5. Libraries for nokogiri gem
 One of the gems - nokogiri - requires few libraries to be installed first:
-- In OSX 10.9+ you may need to install xCode command tools to allow you to install libiconv.
-`xcode-select --install`
 
 - Install libraries:
 `brew install libxml2 libxslt libiconv`
@@ -39,24 +45,23 @@ One of the gems - nokogiri - requires few libraries to be installed first:
 - You may need to link libiconv
 `brew link libiconv`
 
-
 # Database setup
 We're using postgres. Make sure it's running :) Then log in to template with this command line:
 
 Ubuntu: `sudo -u postgres psql template1`
-OSX: `psql template1`
+MacOS: `psql template1`
 
 You will now be in psql command line.
 After that in the console run the development setup script - this script is already filled in with passwords, etc.
 If you want to change any of the information in there you will need to change it also in database.yml later!
 
-In the pql console run: `\i <PATH_TO_PROJECT>/db/development_setup_script.sql`
+In the pql console run: `\i <PATH_TO_PROJECT>/db/development_setup_script.sql` (you can get the current path by typing `pwd`)
 Exit console by typing `\q`
 
 **Copy database.yml.sample to database.yml**:
 `cp config/database.yml.sample config/database.yml`
 
-Run `bundle install`
+Run `bundle install` to install all the needed gems (this step is complete once all gems listed by this command are green).
 Then `rake db:reseed` to populate development environment with example data.
 Load test database with `rake db:test:load`.
 
@@ -71,15 +76,17 @@ and enter your Super Admin's password.
 And then:
 `bundle install`
 
-3. If you are getting an error about "Ignoring some gems" when running `rails s` (error: https://monosnap.com/file/zS6mWQeW0h7kMOAU2z0yjS9ansbxSA), try to run:
-`gem pristine --all`
-
 # Credentials
 **Seeds have a user already created for you.**
 `admin@example.com` with password `12345678`
 
-# Run
+# Run server
 `rails s`
+
+To access the page, type `http://localhost:3000/` in the browser address bar.
+
+If you are getting an error about "Ignoring some gems" when running `rails s` (error: https://monosnap.com/file/zS6mWQeW0h7kMOAU2z0yjS9ansbxSA), try to run:
+`gem pristine --all`
 
 # Run specs (if any)
 - Run all specs:
