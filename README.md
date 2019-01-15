@@ -95,6 +95,22 @@ If you are getting an error about "Ignoring some gems" when running `rails s` (e
 - Run specific spec:
 `rspec spec/features/nameOfSpec_spec.rb`
 
+# Hints
+
+- To see the interface of Chrome browser add:
+`js: true`
+at the beginning of your spec, like this:
+
+`require 'rails_helper'
+feature 'my spec, js: true do
+end`
+
+- To stop/freeze the spec running after the chosen step you can add:
+`binding.pry`
+which stops the spec and it lets you see what happened after the particular action.
+It also activates the rails/pry console in the terminal which you may use to debug your spec.
+REMEMBER to remove binding.pry after debugging the spec.
+
 # Change driver
 In capybara.rb file (you can find it in spec/support/ folder) you can change driver to Headless (which means specs will run without running Chrome interface) by changing the line:
 `Capybara.javascript_driver = :chrome`
