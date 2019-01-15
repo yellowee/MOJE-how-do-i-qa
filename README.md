@@ -102,7 +102,7 @@ If you are getting an error about "Ignoring some gems" when running `rails s` (e
 at the beginning of your spec, like this:
 
 `require 'rails_helper'
-feature 'my spec, js: true do
+feature 'my spec', js: true do
 end`
 
 - To stop/freeze the spec running after the chosen step you can add:
