@@ -55,7 +55,7 @@ You will now be in psql command line.
 After that in the console run the development setup script - this script is already filled in with passwords, etc.
 If you want to change any of the information in there you will need to change it also in database.yml later!
 
-In the pql console run: `\i <PATH_TO_PROJECT>/db/development_setup_script.sql` (you can get the current path by typing `pwd`)
+In the pql console run: `\i db/development_setup_script.sql` (you can get the current path by typing `pwd`)
 Exit console by typing `\q`
 
 **Copy database.yml.sample to database.yml**:
