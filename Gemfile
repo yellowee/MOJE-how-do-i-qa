@@ -21,7 +21,6 @@ gem 'sprig', '~> 0.1'
 group :development, :test do
   gem 'bogus', require: false
   gem 'capybara'
-  gem 'chromedriver-helper'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'ffaker'
@@ -32,6 +31,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
+  gem 'webdrivers'
 end
 
 group :test do
