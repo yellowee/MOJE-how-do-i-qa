@@ -14,12 +14,12 @@ FORK THE PROJECT!
 - In OSX 10.9+ you may need to install xCode command tools to allow you to install libiconv.
 `xcode-select --install`
 
-3. Ruby 2.1.5
+3. Ruby 2.3.8
 - Install RVM (if you don't have it)
 `\curl -sSL https://get.rvm.io | bash`
 
-- Install Ruby 2.1.5
-`rvm install "ruby-2.1.5"`
+- Install Ruby 2.3.8
+`rvm install "ruby-2.3.8"`
 
 4. Postgres (database)
 - Install Homebrew (package manager)
@@ -55,7 +55,7 @@ You will now be in psql command line.
 After that in the console run the development setup script - this script is already filled in with passwords, etc.
 If you want to change any of the information in there you will need to change it also in database.yml later!
 
-In the pql console run: `\i <PATH_TO_PROJECT>/db/development_setup_script.sql` (you can get the current path by typing `pwd`)
+In the pql console run: `\i db/development_setup_script.sql` (you can get the current path by typing `pwd`)
 Exit console by typing `\q`
 
 **Copy database.yml.sample to database.yml**:

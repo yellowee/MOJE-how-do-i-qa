@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-gem 'pg'
+gem 'pg', '0.17.1'
 gem 'rails', '4.1.8'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
@@ -21,9 +21,8 @@ gem 'sprig', '~> 0.1'
 group :development, :test do
   gem 'bogus', require: false
   gem 'capybara'
-  gem 'chromedriver-helper'
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'ffaker'
   gem 'poltergeist', require: false
   gem 'pry'
@@ -32,6 +31,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
+  gem 'webdrivers'
 end
 
 group :test do
