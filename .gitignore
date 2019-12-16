@@ -19,3 +19,6 @@
 /config/sec_config.yml
 
 /config/database.yml
+
+/spec/features/*.rb
+/spec/factories/*.rb

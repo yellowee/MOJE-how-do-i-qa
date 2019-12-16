@@ -4,7 +4,9 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'pg', '0.17.1'
-gem 'rails', '4.1.8'
+gem 'puma'
+gem 'rails', '4.2.0'
+gem 'responders', '~> 2.0'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'turbolinks'
@@ -45,4 +47,5 @@ group :development do
   gem 'guard-rspec', require: false
   gem 'spring'
   gem 'thin'
+  gem 'web-console', '~> 2.0'
 end
