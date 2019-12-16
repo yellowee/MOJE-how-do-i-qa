@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.2.0'
 gem 'pg', '>= 0.18.0'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'decent_exposure'
 
+gem 'bootsnap'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'devise'
