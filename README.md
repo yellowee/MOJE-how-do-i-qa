@@ -14,12 +14,12 @@ FORK THE PROJECT!
 - In OSX 10.9+ you may need to install xCode command tools to allow you to install libiconv.
 `xcode-select --install`
 
-3. Ruby 2.3.8
+3. Ruby 2.6.5
 - Install RVM (if you don't have it)
 `\curl -sSL https://get.rvm.io | bash`
 
 - Install Ruby 2.3.8
-`rvm install "ruby-2.3.8"`
+`rvm install "ruby-2.6.5"`
 
 4. Postgres (database)
 - Install Homebrew (package manager)

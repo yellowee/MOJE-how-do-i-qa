@@ -1,37 +1,54 @@
 source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jbuilder', '~> 2.0'
+ruby '2.6.5'
+
+gem 'rails', '~> 6.0.2'
+gem 'pg', '>= 0.18.0'
+gem 'puma', '~> 4.1'
+gem 'sass-rails', '>= 6'
+gem 'webpacker', '~> 4.0'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
-gem 'pg', '0.17.1'
-gem 'rails', '4.1.8'
-gem 'sass-rails', '~> 4.0.3'
+gem 'uglifier'
+gem 'coffee-rails', '~> 5.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'turbolinks'
-gem 'uglifier', '>= 1.3.0'
 
 gem 'decent_exposure'
 
+gem 'bootsnap', '>= 1.4.2', require: false
+
+gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'haml-rails'
-gem 'simple_form'
-gem 'sprig', '~> 0.1'
+gem 'sprig'
 
 group :development, :test do
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'bogus', require: false
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'ffaker'
-  gem 'poltergeist', require: false
   gem 'pry'
   gem 'pry-rails'
-  gem 'quiet_assets'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'spring-commands-rspec'
   gem 'webdrivers'
+end
+
+group :development do
+  gem 'web-console'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'guard-rspec', require: false
+  gem 'thin'
 end
 
 group :test do
@@ -39,10 +56,5 @@ group :test do
   gem 'simplecov'
 end
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'guard-rspec', require: false
-  gem 'spring'
-  gem 'thin'
-end
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
