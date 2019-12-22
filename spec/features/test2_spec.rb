@@ -12,7 +12,9 @@ feature 'Test #2', js:true do
             choose('example_radiobutton_opt_2')
             click_button('Submit')
             expect('/pages/test_2')
-            have_css(class:'alert alert-warning')
+                have_css(class:'alert alert-warning')
+                have_content('przyklad')
+                
         end
     end
 end
