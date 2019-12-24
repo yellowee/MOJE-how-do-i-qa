@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 feature 'Test #2', js:true do
-    context 'Filling up the form' do
-        scenario 'Successfully filling up the form' do
+    context 'Checking the steps of Test #2' do
+        scenario 'Filling up the form' do
             visit('/pages/test_2')
             within(id:'example_textfield') do
                 fill_in(id: 'example_textfield', with:'przyklad')
@@ -16,5 +16,7 @@ feature 'Test #2', js:true do
                 have_content('przyklad')
                 
         end
-    end
+        scenario 'Not filling up the form' do
+            expect('/pages/test_2')to. have_text('Data will appear here after submission.')
+        end
 end
