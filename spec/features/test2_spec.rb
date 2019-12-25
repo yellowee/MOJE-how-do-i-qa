@@ -18,10 +18,11 @@ feature 'Test #2', js:true do
                 have_content('Checkbox checked: 1')
                 have_content('Select option picked: Opt 2')
                 have_content('Radio option picked: opt2')
-                binding.pry
         end
+    
         scenario 'Not filling up the form' do
             expect('/pages/test_2')
                 have_text('Data will appear here after submission.')
         end
+    end
 end
