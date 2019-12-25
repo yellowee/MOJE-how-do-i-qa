@@ -6,7 +6,7 @@ feature 'Test #3', js:true do
         scenario 'Highlighting of a table row' do
             visit '/pages/test_3'
             within_table id:'test-3-table' do
-                find_field(first('table tr')).click
+                first('table tr').click
             end
             expect 'first #(table tr)'
                 have_css'highlighted', type: :visible
