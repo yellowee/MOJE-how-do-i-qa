@@ -9,7 +9,9 @@ feature 'Test #3', js:true do
                 first('table tr').click
             end
             expect 'first #(table tr)'
-                have_css'highlighted', type: :visible
+                have_css'highlighted', type: :visible 
+                #nie jestem pewna czy to rzeczywiscie sprawdza highlight tego rzedu
+                #mimo ze nie ma bledu
         end
     end
 end

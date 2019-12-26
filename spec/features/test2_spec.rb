@@ -18,7 +18,7 @@ feature 'Test #2', js:true do
                 have_content('Checkbox checked: 1')
                 have_content('Select option picked: Opt 2')
                 have_content('Radio option picked: opt2')
-        end
+        end #wydaje mi sie ze mozna to lepiej napisac
     
         scenario 'Not filling up the form' do
             expect('/pages/test_2')
